@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmed - Aadhavan Isaikuzhu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .success-page {
+            text-align: center;
+            padding: 4rem 2rem;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: #25D366;
+            margin-bottom: 2rem;
+        }
+
+        .success-page h1 {
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .success-page p {
+            color: #555;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo" class="nav-logo-img"> Aadhavan
+                Isaikuzhu</a>
+            <div class="lang-switch-container" style="margin-right: 20px;">
+                <button id="langSwitchBtn" class="lang-switch-btn">தமிழ்</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container success-page">
+        <i class="fas fa-clock success-icon" style="color: var(--primary-gold);"></i>
+
+        <h1 class="lang-en">Booking Request Submitted</h1>
+        <h1 class="lang-ta">முன்பதிவு கோரிக்கை சமர்ப்பிக்கப்பட்டது</h1>
+
+        <p class="lang-en">Your payment proof has been sent for verification. Your booking will be officially
+            <strong>Confirmed</strong> once our team verifies the screenshot and credit in our bank account (usually
+            within 15-30 minutes otherwise, your money will be refunded to your bank If any other service is already
+            booked on the date you selected, your service will be canceled. The advance amount you sent will be refunded
+            to your account.)
+        </p>
+        <p class="lang-ta">உங்கள் பேமெண்ட் ஆதாரம் சரிபார்ப்பிற்காக அனுப்பப்பட்டுள்ளது. எங்கள் குழு ஸ்கிரீன்ஷாட்டைச்
+            சரிபார்த்து, உங்கள் வங்கி கணக்கில் பணத்தைச் சரிபார்த்தவுடன் உங்கள் முன்பதிவு அதிகாரப்பூர்வமாக
+            <strong>உறுதிப்படுத்தப்படும்</strong> (பொதுவாக 30-60 நிமிடங்களுக்குள் அல்லது, உங்கள் பணம் உங்கள் வங்கிக்குத்
+            திருப்பி அனுப்பப்படும் மற்றும் நீங்கள் தேர்வு செய்த தேதி ஏற்கனவே வேறு எந்தப் பணி/சேவை பதிவு
+            செய்யப்பட்டிருந்தால், உங்கள் சேவை ரத்து செய்யப்படும். மேலும் நீங்கள் அனுப்பிய முன்‌செலுத்தல் தொகை உங்கள்
+            கணக்கிற்கு திருப்பி அனுப்பப்படும்).
+        </p>
+
+        <p style="font-size: 1rem; color: #888;" class="lang-en">A copy of your request has been sent to your WhatsApp.
+        </p>
+        <p style="font-size: 1rem; color: #888;" class="lang-ta">உங்கள் கோரிக்கையின் நகல் உங்கள் வாட்ஸ்அப்பிற்கு
+            அனுப்பப்பட்டுள்ளது.</p>
+
+        <div
+            style="margin: 2rem 0; padding: 30px; background: #e8f5e9; border-radius: 15px; border: 2px solid #c8e6c9; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.1);">
+            <p style="margin-bottom: 20px; color: #2e7d32; font-weight: 700; font-size: 1.1rem;">
+                <span class="lang-en">Automatic Confirmation</span>
+                <span class="lang-ta">தானியங்கி உறுதிப்படுத்தல்</span>
+            </p>
+            <p style="margin-bottom: 20px; color: #555;">
+                <span class="lang-en">Sending confirmation to your WhatsApp in <span id="countdown"
+                        style="font-weight: bold; color: #25D366; font-size: 1.5rem;">3</span> seconds...</span>
+                <span class="lang-ta">உங்கள் வாட்ஸ்அப்பிற்கு உறுதிப்படுத்தல் செய்தி <span id="countdown"
+                        style="font-weight: bold; color: #25D366; font-size: 1.5rem;">3</span> வினாடிகளில்
+                    அனுப்பப்படும்...</span>
+            </p>
+            <button id="sendWaConfirm" class="btn"
+                style="background-color: #25D366; border-color: #25D366; width: 100%; max-width: 300px;">
+                <i class="fab fa-whatsapp"></i>
+                <span class="lang-en">Send Now</span>
+                <span class="lang-ta">இப்போதே அனுப்பு</span>
+            </button>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #888;">
+                <span class="lang-en">If WhatsApp doesn't open automatically, please click the button above.</span>
+                <span class="lang-ta">வாட்ஸ்அப் தானாகவே திறக்கவில்லை என்றால், மேலே உள்ள பொத்தானைக் கிளிக்
+                    செய்யவும்.</span>
+            </p>
+        </div>
+
+        <a href="index.html" class="btn" style="background-color: transparent; color: #666; border-color: #ccc;">
+            <span class="lang-en">Return to Home</span>
+            <span class="lang-ta">முகப்புப் பக்கத்திற்குத் திரும்பவும்</span>
+        </a>
+    </section>
+
+    <footer>
+        <p class="lang-en">&copy; 2025 Aadhavan Athiradi Isaikuzhu. All rights reserved.</p>
+        <p class="lang-ta">&copy; 2025 ஆதவன் அதிரடி இசைக்குழு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

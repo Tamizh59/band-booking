@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now - Aadhavan Athiradi Isaikuzhu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo" class="nav-logo-img"> Aadhavan
+                Isaikuzhu</a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-ta">முகப்பு</span>
+                    </a></li>
+                <li><a href="services.html">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-ta">சேவைகள்</span>
+                    </a></li>
+                <li><a href="booking.html" class="active">
+                        <span class="lang-en">Book Now</span>
+                        <span class="lang-ta">முன்பதிவு</span>
+                    </a></li>
+                <li><a href="contact.html">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-ta">தொடர்பு</span>
+                    </a></li>
+                <li class="lang-switch-container">
+                    <button id="langSwitchBtn" class="lang-switch-btn">தமிழ்</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="background-color: var(--dark-black); color: var(--primary-gold); padding: 3rem; text-align: center;">
+        <h1 style="color: var(--primary-gold);" class="lang-en">Booking & Advance Payment</h1>
+        <h1 style="color: var(--primary-gold);" class="lang-ta">முன்பதிவு மற்றும் முன்பணம்</h1>
+    </div>
+
+    <section class="container">
+        <div class="booking-container">
+            <h2 class="section-title">
+                <span class="lang-en">Event Details</span>
+                <span class="lang-ta">நிகழ்ச்சி விவரங்கள்</span>
+            </h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="name">
+                        <span class="lang-en">Customer Name</span>
+                        <span class="lang-ta">வாடிக்கையாளர் பெயர்</span>
+                    </label>
+                    <input type="text" id="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form-group">
+                    <label for="mobile">
+                        <span class="lang-en">Mobile Number</span>
+                        <span class="lang-ta">மொபைல் எண்</span>
+                    </label>
+                    <input type="tel" id="mobile" required placeholder="Enter 10-digit mobile number"
+                        pattern="[0-9]{10}">
+                </div>
+
+                <div class="form-group">
+                    <label for="functionType">
+                        <span class="lang-en">Function Type</span>
+                        <span class="lang-ta">நிகழ்ச்சி வகை</span>
+                    </label>
+                    <select id="functionType" required>
+                        <option value="" disabled selected>Select Function</option>
+                        <option value="wedding">Wedding / Marriage</option>
+                        <option value="conception">Reception</option>
+                        <option value="temple">Temple Function</option>
+                        <option value="cultural">Cultural Event</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1;">
+                        <label for="date">
+                            <span class="lang-en">Function Date</span>
+                            <span class="lang-ta">நிகழ்ச்சி தேதி</span>
+                        </label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label>
+                            <span class="lang-en">Function Time (AM/PM)</span>
+                            <span class="lang-ta">நிகழ்ச்சி நேரம்</span>
+                        </label>
+                        <div style="display: flex; gap: 10px;">
+                            <input type="number" id="timeHour" min="1" max="12" placeholder="HH" required
+                                style="width: 60px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                            <input type="number" id="timeMinute" min="0" max="59" placeholder="MM" required
+                                style="width: 60px; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+                            <select id="timeAmPm" required
+                                style="flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background: white;">
+                                <option value="AM">AM</option>
+                                <option value="PM">PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="location">
+                        <span class="lang-en">Location</span>
+                        <span class="lang-ta">இடம்</span>
+                    </label>
+                    <textarea id="location" rows="2" required placeholder="Event venue/address"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceType">
+                        <span class="lang-en">Select Service</span>
+                        <span class="lang-ta">சேவையைத் தேர்ந்தெடுக்கவும்</span>
+                    </label>
+                    <select id="serviceType" required>
+                        <option value="" disabled selected>Select Service</option>
+                        <option value="isaikuzhu">Isaikuzhu Performance</option>
+                        <option value="drums">Drums Performance</option>
+                        <option value="combo">Isaikuzhu + Drums Combo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="personCount">
+                        <span class="lang-en">Number of Persons Required</span>
+                        <span class="lang-ta">தேவைப்படும் நபர்களின் எண்ணிக்கை</span>
+                    </label>
+                    <input type="number" id="personCount" min="1" required placeholder="e.g. 10">
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <span class="lang-en">Should we arrange the vehicle charges?</span>
+                        <span class="lang-ta">வாகனக் கட்டணத்தை நாங்களே ஏற்பாடு செய்ய வேண்டுமா?</span>
+                    </label>
+                    <div style="display: flex; gap: 20px; margin-top: 10px;">
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
+                            <input type="radio" name="vehicleArrangement" value="Yes" required
+                                style="width: 20px; height: 20px; accent-color: #25D366;">
+                            <span class="lang-en">Yes (By Us)</span>
+                            <span class="lang-ta">ஆம் (எங்களால்)</span>
+                        </label>
+                        <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 500;">
+                            <input type="radio" name="vehicleArrangement" value="No" required
+                                style="width: 20px; height: 20px; accent-color: #25D366;">
+                            <span class="lang-en">No (By You)</span>
+                            <span class="lang-ta">இல்லை (உங்களால்)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 2rem;">
+                    <button type="submit" id="initialSubmit" class="btn" style="width: 100%; font-size: 1.2rem;">
+                        <span class="lang-en">Proceed to Payment</span>
+                        <span class="lang-ta">கட்டணம் செலுத்தத் தொடரவும்</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="lang-en">&copy; 2025 Aadhavan Athiradi Isaikuzhu. All rights reserved.</p>
+        <p class="lang-ta">&copy; 2025 ஆதவன் அதிரடி இசைக்குழு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

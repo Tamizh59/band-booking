@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Aadhavan Athiradi Isaikuzhu</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="Logo" class="nav-logo-img"> Aadhavan
+                Isaikuzhu</a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-ta">முகப்பு</span>
+                    </a></li>
+                <li><a href="services.html">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-ta">சேவைகள்</span>
+                    </a></li>
+                <li><a href="booking.html">
+                        <span class="lang-en">Book Now</span>
+                        <span class="lang-ta">முன்பதிவு</span>
+                    </a></li>
+                <li><a href="contact.html">
+                        <span class="lang-en">Contact</span>
+                        <span class="lang-ta">தொடர்பு</span>
+                    </a></li>
+                <li class="lang-switch-container">
+                    <button id="langSwitchBtn" class="lang-switch-btn">தமிழ்</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div style="background-color: var(--dark-black); color: var(--primary-gold); padding: 3rem; text-align: center;">
+        <h1 style="color: var(--primary-gold);" class="lang-en">Step 2: Advance Payment</h1>
+        <h1 style="color: var(--primary-gold);" class="lang-ta">படி 2: முன்பணம் செலுத்துதல்</h1>
+    </div>
+
+    <section class="container">
+        <div class="booking-container">
+            <h2 class="section-title">
+                <span class="lang-en">QR Code Payment</span>
+                <span class="lang-ta">QR குறியீடு பேமெண்ட்</span>
+            </h2>
+
+            <div id="paymentContent" style="text-align: center; margin: 20px 0;">
+                <p style="margin-bottom: 15px; font-size: 1.2rem; font-weight: bold; color: var(--dark-black);"
+                    class="lang-en">
+                    Scan to Pay Advance</p>
+                <p style="margin-bottom: 15px; font-size: 1.2rem; font-weight: bold; color: var(--dark-black);"
+                    class="lang-ta">
+                    முன்பணம் செலுத்த ஸ்கேன் செய்யவும்</p>
+
+                <img src="assets/img/qr.jpeg" alt="Payment QR Code"
+                    style="border: 4px solid var(--primary-gold); border-radius: 10px; width: 100%; max-width: 300px; height: auto;">
+
+                <div
+                    style="margin-top: 30px; text-align: left; padding: 25px; background: #fff; border: 1px solid #eee; border-radius: 10px; border-top: 5px solid var(--primary-gold); box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <h3
+                        style="margin-bottom: 20px; color: var(--dark-black); font-size: 1.1rem; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+                        <span class="lang-en">Payment Details</span>
+                        <span class="lang-ta">பேமெண்ட் விவரங்கள்</span>
+                    </h3>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="totalAmount"
+                            style="font-size: 0.95rem; color: #444; font-weight: 600; display: block; margin-bottom: 8px;">
+                            <span class="lang-en">Total Function Amount (INR)</span>
+                            <span class="lang-ta">மொத்த நிகழ்ச்சி தொகை (ருபாய்)</span>
+                        </label>
+                        <input type="number" id="totalAmount" placeholder="e.g. 10000"
+                            style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div id="advanceGuide"
+                        style="margin-bottom: 20px; padding: 15px; background: #fffdf0; border: 1px solid #ffeeba; border-radius: 8px; font-size: 0.9rem;">
+                        <p style="font-weight: 600; color: #856404; margin-bottom: 8px;">
+                            <span class="lang-en">Advance Guide (30%):</span>
+                            <span class="lang-ta">முன்பணம் வழிகாட்டி (30%):</span>
+                        </p>
+                        <ul style="list-style: none; color: #666; padding-left: 0;">
+                            <li>₹10,000 → ₹3,000</li>
+                            <li>₹20,000 → ₹6,000</li>
+                            <li>₹30,000 → ₹9,000</li>
+                            <li>₹40,000 → ₹12,000</li>
+                            <li>₹50,000 → ₹15,000</li>
+                        </ul>
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="paymentAmount"
+                            style="font-size: 0.95rem; color: #444; font-weight: 600; display: block; margin-bottom: 8px;">
+                            <span class="lang-en">Enter Amount Paid (INR)</span>
+                            <span class="lang-ta">செலுத்திய தொகையை உள்ளிடவும் (ருபாய்)</span>
+                        </label>
+                        <input type="number" id="paymentAmount" min="10" placeholder="Min ₹10" required
+                            style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label for="transactionId"
+                            style="font-size: 0.95rem; color: #444; font-weight: 600; display: block; margin-bottom: 8px;">
+                            <span class="lang-en">UPI Transaction ID</span>
+                            <span class="lang-ta">UPI பரிவர்த்தனை ஐடி</span>
+                        </label>
+                        <input type="text" id="transactionId" placeholder="Enter 12-digit transaction ID" required
+                            style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 1rem;">
+                    </div>
+
+                    <h3 style="margin-bottom: 15px; color: var(--dark-black); font-size: 1.1rem;">
+                        <span class="lang-en">Upload Payment Screenshot</span>
+                        <span class="lang-ta">பேமெண்ட் ஸ்கிரீன்ஷாட்டைப் பதிவேற்றவும்</span>
+                    </h3>
+
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <div id="screenshotUploadZone"
+                            style="border: 2px dashed #ddd; border-radius: 8px; padding: 25px; text-align: center; cursor: pointer; transition: all 0.3s; background: #fafafa;">
+                            <input type="file" id="paymentScreenshot" accept="image/*" style="display: none;">
+                            <div id="uploadPlaceholder">
+                                <i class="fas fa-cloud-upload-alt"
+                                    style="font-size: 2.5rem; color: var(--primary-gold); margin-bottom: 15px;"></i>
+                                <p style="margin: 0; color: #666; font-size: 1rem; font-weight: 500;" class="lang-en">
+                                    Click to upload or drag & drop</p>
+                                <p style="margin: 0; color: #666; font-size: 1rem; font-weight: 500;" class="lang-ta">
+                                    பதிவேற்ற கிளிக் செய்யவும் அல்லது இழுத்து விடவும்</p>
+
+                                <p style="margin: 5px 0 0; color: #999; font-size: 0.85rem;">PNG, JPG or JPEG (Max 5MB)
+                                </p>
+                            </div>
+                            <div id="screenshotPreviewContainer"
+                                style="display: none; position: relative; margin-top: 10px;">
+                                <img id="screenshotPreview" src="" alt="Screenshot Preview"
+                                    style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                                <div id="removeScreenshot"
+                                    style="position: absolute; top: -12px; right: -12px; background: #ff4d4d; color: white; border-radius: 50%; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.2); border: 2px solid white;">
+                                    <i class="fas fa-times"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <button type="button" id="confirmPaymentBtn" class="btn"
+                            style="width: 100%; font-size: 1.2rem; background-color: #ccc; color: white; border: none; cursor: not-allowed;"
+                            disabled>
+                            <span class="lang-en">Upload Screenshot First</span>
+                            <span class="lang-ta">முதலில் ஸ்கிரீன்ஷாட்டைப் பதிவேற்றவும்</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="booking.html" style="color: #666; text-decoration: none; font-size: 0.9rem;">
+                    <i class="fas fa-arrow-left"></i>
+                    <span class="lang-en">Edit event details</span>
+                    <span class="lang-ta">நிகழ்ச்சி விவரங்களைத் திருத்தவும்</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p class="lang-en">&copy; 2025 Aadhavan Athiradi Isaikuzhu. All rights reserved.</p>
+        <p class="lang-ta">&copy; 2025 ஆதவன் அதிரடி இசைக்குழு. அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

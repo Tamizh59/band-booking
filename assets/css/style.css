@@ -1,0 +1,441 @@
+/* Global Styles */
+:root {
+    --primary-red: #D32F2F;
+    /* Vibrant Red */
+    --primary-gold: #FFD700;
+    /* Gold */
+    --dark-black: #1A1A1A;
+    /* Dark Black */
+    --off-white: #FAF9F6;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--off-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Georgia', serif;
+    /* Traditional touch */
+    color: var(--dark-black);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+header {
+    background-color: var(--dark-black);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    border-bottom: 3px solid var(--primary-gold);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: var(--primary-gold);
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo-img {
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 2px solid var(--primary-gold);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 2px;
+}
+
+.nav-logo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--primary-gold);
+}
+
+/* Lightbox for Logo */
+.logo-lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+}
+
+.logo-lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    border: 2px solid var(--primary-gold);
+}
+
+.logo-lightbox.active {
+    display: flex;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-gold);
+}
+
+.menu-toggle {
+    display: none;
+    color: var(--primary-gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/hero-bg.png');
+    /* Drum/Festival Placeholder */
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-light);
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-gold);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-red);
+    color: var(--text-light);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    border: 2px solid var(--primary-red);
+}
+
+.btn:hover {
+    background-color: var(--dark-black);
+    border-color: var(--primary-gold);
+    color: var(--primary-gold);
+    transform: scale(1.05);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-gold);
+}
+
+/* Services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-gold);
+}
+
+.service-img {
+    height: 200px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-gold);
+    font-size: 3rem;
+}
+
+.service-info {
+    padding: 1.5rem;
+}
+
+.service-info h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-red);
+}
+
+/* Booking Form */
+.booking-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 5px solid var(--primary-gold);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--dark-black);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+
+.payment-methods {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-icon {
+    padding: 10px 20px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.payment-icon.selected {
+    border-color: var(--primary-red);
+    background-color: #fff0f0;
+}
+
+/* Contact */
+.contact-details {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.contact-item {
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-item i {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-black);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+    border-top: 3px solid var(--primary-gold);
+}
+
+/* Screenshot Upload */
+#screenshotUploadZone:hover {
+    border-color: var(--primary-gold) !important;
+    background: #fff !important;
+}
+
+#screenshotUploadZone.dragover {
+    border-color: var(--primary-red) !important;
+    background: #fff0f0 !important;
+}
+
+#screenshotPreviewContainer img {
+    border: 1px solid #ddd;
+}
+
+#removeScreenshot:hover {
+    background: #e60000 !important;
+    transform: scale(1.1);
+}
+
+/* Language Switching */
+.lang-ta {
+    display: none;
+}
+
+body.lang-tamil .lang-en {
+    display: none;
+}
+
+body.lang-tamil .lang-ta {
+    display: inline;
+}
+
+/* If the element is a block level, ensure it displays correctly */
+body.lang-tamil div.lang-ta,
+body.lang-tamil p.lang-ta,
+body.lang-tamil section.lang-ta,
+body.lang-tamil h1.lang-ta,
+body.lang-tamil h2.lang-ta,
+body.lang-tamil h3.lang-ta {
+    display: block;
+}
+
+.lang-switch-container {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.lang-switch-btn {
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 5px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.lang-switch-btn:hover {
+    background: var(--primary-gold);
+    color: var(--dark-black);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background-color: var(--dark-black);
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .lang-switch-container {
+        margin: 20px 0 0 0;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
